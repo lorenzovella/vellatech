@@ -21,7 +21,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG') == True
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
-ALLOWED_HOSTS = ['manadalanches.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['vellatech.herokuapps.com','vellate.ch','www.vellate.ch','127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'rest_framework',
-    'Manada.pedidos',
+    'Portfolio.app',
 ]
 
 # Quick-start development settings - unsuitable for production
