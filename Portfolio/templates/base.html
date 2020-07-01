@@ -70,29 +70,6 @@
     }
 
   </style>
-
-    <script>
-    var path = anime.path('.path-demo .lines path');
-    var lineDrawing = function() {
-    anime({
-      targets: '.path-demo .lines path',
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing:  'spring(5, 10, 5, 0)',
-      duration: 1500,
-      delay: function(el, i) { return i * 250 },
-      direction: 'alternate',
-      loop: true
-    });
-    }
-    var attachTilt = function() {
-      const tilt = $('.tiltItem').tilt();
-      const tilt2 = $('.tiltScale').tilt({scale: 1.2});
-    }
-    $( document ).ready(function() {
-    lineDrawing()
-    attachTilt()
-  });
-    </script>
     {% block head %}
     {% endblock %}
     <title>VellaTech</title>

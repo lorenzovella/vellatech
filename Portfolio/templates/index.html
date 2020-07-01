@@ -1,9 +1,33 @@
 {% extends "base.html" %}
+{% block head %}
+<script>
+var path = anime.path('.path-demo .lines path');
+var lineDrawing = function() {
+  anime({
+    targets: '.path-demo .lines path',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing:  'spring(5, 10, 5, 0)',
+    duration: 1500,
+    delay: function(el, i) { return i * 250 },
+    direction: 'alternate',
+    loop: true
+  });
+}
+var attachTilt = function() {
+  const tilt = $('.tiltItem').tilt();
+  const tilt2 = $('.tiltScale').tilt({scale: 1.2});
+}
+$( document ).ready(function() {
+lineDrawing()
+attachTilt()
+});
+</script>
+{% endblock %}
 {% block content %}
   <div class="container-fluid text-white">
     <div class="row logo tiltScale">
       <div class="col-md-12 mt-5 path-demo">
-          <svg class="d-flex mx-auto" xmlns="http://www.w3.org/2000/svg"  viewBox="-165.428759765625 -0.4075073242187415 830.85751953125 150.81501464843748" preserveAspectRatio="xMidYMid" width="100%" height="100%">
+          <svg class="d-flex mx-auto" style="height: auto;" xmlns="http://www.w3.org/2000/svg"  viewBox="-165.428759765625 -0.4075073242187415 830.85751953125 150.81501464843748" preserveAspectRatio="xMidYMid" width="100%" height="100%">
             <g fill-rule="evenodd" class="lines" transform="translate(-49.100008487701416, 106.05500030517578)">
               <path fill="none" stroke-width="1" stroke="#FFFFFF" d="M39.22 0L7.81 0L7.81-57.03L15.23-60.55L15.63-60.55L15.63-7.11L42.38-7.11L42.38-6.72L39.22 0Z"/>
               <path fill="none" stroke-width="1" stroke="#FFFFFF" d="M57.03-7.03L57.03-7.03L66.02-7.03L66.02-7.03Q69.92-7.03 69.92-11.72L69.92-11.72L69.92-31.25L69.92-31.25Q69.92-35.94 66.02-35.94L66.02-35.94L57.03-35.94L57.03-35.94Q53.13-35.94 53.13-31.25L53.13-31.25L53.13-11.72L53.13-11.72Q53.13-7.03 57.03-7.03ZM66.02 0L57.03 0L57.03 0Q45.31 0 45.31-11.72L45.31-11.72L45.31-31.25L45.31-31.25Q45.31-42.97 57.03-42.97L57.03-42.97L66.02-42.97L66.02-42.97Q77.73-42.97 77.73-31.25L77.73-31.25L77.73-11.72L77.73-11.72Q77.73 0 66.02 0L66.02 0Z"/>
