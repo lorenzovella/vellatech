@@ -6,7 +6,7 @@ from django.shortcuts import redirect, render, HttpResponseRedirect
 
 def adicionarAoCarrinho(request, pk):
     if request.session.has_key('carrinho') == False:
-        return redirect('pedidos_carrinho_create')
+        return redirect('app_carrinho_create')
     if request.method == "POST":
         obj = request.POST;
         fooInstance = models.itemDoCarrinho()
@@ -16,7 +16,7 @@ def adicionarAoCarrinho(request, pk):
         if 'referenciaOpcionais' in obj:
             for item in obj.getlist('referenciaOpcionais'):
                 fooInstance.referenciaOpcionais.add(item)
-        return redirect('pedidos_cardapio_list')
+        return redirect('app_cardapio_list')
 
     item = models.cardapio.objects.get(pk=pk)
     opcionais = models.opcionais.objects.filter(tipoDoItem = item.tipoDoItem)
@@ -34,7 +34,7 @@ def adicionarAoCarrinho(request, pk):
     else:
         context['contador_carrinho'], context['subtotal_carrinho'] = 0
 
-    return render(request, 'pedidos/adicionar-ao-carrinho.html', {'item':item, 'opcionais':opcionais, 'context':context})
+    return render(request, 'app/adicionar-ao-carrinho.html', {'item':item, 'opcionais':opcionais, 'context':context})
 
 
 
@@ -50,7 +50,7 @@ class carrinhoCreateView(generic.CreateView):
         instance = form.save()
         self.request.session['carrinho'] = instance.pk
         self.object = instance
-        return redirect('pedidos_cardapio_list')
+        return redirect('app_cardapio_list')
 
 class carrinhoDetailView(generic.DetailView):
     model = models.carrinho

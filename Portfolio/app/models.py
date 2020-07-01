@@ -18,10 +18,10 @@ class carrinho(models.Model):
         return str(self.pk)
 
     def get_absolute_url(self):
-        return reverse("pedidos_carrinho_detail", args=(self.pk,))
+        return reverse("app_carrinho_detail", args=(self.pk,))
 
     def get_update_url(self):
-        return reverse("pedidos_carrinho_update", args=(self.pk,))
+        return reverse("app_carrinho_update", args=(self.pk,))
 
 
 class opcionais(models.Model):
@@ -40,10 +40,10 @@ class opcionais(models.Model):
         return str(self.pk)
 
     def get_absolute_url(self):
-        return reverse("pedidos_opcionais_detail", args=(self.pk,))
+        return reverse("app_opcionais_detail", args=(self.pk,))
 
     def get_update_url(self):
-        return reverse("pedidos_opcionais_update", args=(self.pk,))
+        return reverse("app_opcionais_update", args=(self.pk,))
 
 
 class cardapio(models.Model):
@@ -64,18 +64,18 @@ class cardapio(models.Model):
         return str(self.pk)
 
     def get_absolute_url(self):
-        return reverse("pedidos_cardapio_detail", args=(self.pk,))
+        return reverse("app_cardapio_detail", args=(self.pk,))
 
     def get_update_url(self):
-        return reverse("pedidos_cardapio_update", args=(self.pk,))
+        return reverse("app_cardapio_update", args=(self.pk,))
 
 
 class itemDoCarrinho(models.Model):
 
     # Relationships
     referenciaOpcionais = models.ManyToManyField(opcionais)
-    referenciaCardapio = models.ForeignKey("pedidos.cardapio", on_delete=models.CASCADE, related_name = 'item')
-    referenciaCarrinho = models.ForeignKey("pedidos.carrinho", on_delete=models.CASCADE, related_name='item')
+    referenciaCardapio = models.ForeignKey("app.cardapio", on_delete=models.CASCADE, related_name = 'item')
+    referenciaCarrinho = models.ForeignKey("app.carrinho", on_delete=models.CASCADE, related_name='item')
 
     # Fields
     last_updated = models.DateTimeField(auto_now=True, editable=False)
@@ -88,7 +88,7 @@ class itemDoCarrinho(models.Model):
         return str(self.pk)
 
     def get_absolute_url(self):
-        return reverse("pedidos_itemDoCarrinho_detail", args=(self.pk,))
+        return reverse("app_itemDoCarrinho_detail", args=(self.pk,))
 
     def get_update_url(self):
-        return reverse("pedidos_itemDoCarrinho_update", args=(self.pk,))
+        return reverse("app_itemDoCarrinho_update", args=(self.pk,))
