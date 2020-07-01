@@ -1,5 +1,5 @@
 """
-Django settings for Manada project.
+Django settings for portfolio project.
 
 For more information on this file, see
 https://docs.djangoproject.com/

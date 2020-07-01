@@ -1,5 +1,5 @@
 """
-WSGI config for Manada.
+WSGI config for portfolio.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
