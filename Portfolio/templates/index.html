@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "base.html" %}
+{% block head %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -93,8 +92,8 @@
   attachTilt()
 });
   </script>
-</head>
-<body>
+{% endblock %}
+{% block content %}
   <div class="container-fluid text-white">
     <div class="row logo tiltScale">
       <div class="col-md-12 mt-5 path-demo">
@@ -249,8 +248,6 @@
           <a class="navbar-brand mx-auto d-flex lead" >No copyright - No rights reserved - 2020 - developed using Bootstrap, jQuery, Anime.js, Tilt.js</a>
         </nav>
       </div>
-    </div>
-  </footer>
-
-</body>
-</html>
+    </footer>
+  </div>
+{% endblock %}
