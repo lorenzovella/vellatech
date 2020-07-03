@@ -18,151 +18,160 @@ var attachTilt = function() {
   const tilt2 = $('.tiltScale').tilt({scale: 1.2});
 }
 $( document ).ready(function() {
-lineDrawing()
-attachTilt()
+  lineDrawing()
+  attachTilt()
+  setTimeout(function(){
+    document.querySelector('.afterLogo').setAttribute("style","visibility: visible");
+    document.querySelector('.afterLogo').setAttribute("class", "animate__animated animate__fadeInUp");
+  },1000);
 });
 </script>
 {% endblock %}
 {% block content %}
   <div class="container-fluid text-white">
-    <div class="row logo tiltScale">
-      <div class="col-md-12 mt-5 path-demo">
-          <svg class="d-flex mx-auto" style="height: auto;" xmlns="http://www.w3.org/2000/svg"  viewBox="-165.428759765625 -0.4075073242187415 830.85751953125 150.81501464843748" preserveAspectRatio="xMidYMid" width="100%" height="100%">
-            <g fill-rule="evenodd" class="lines" transform="translate(-49.100008487701416, 106.05500030517578)">
-              <path fill="none" stroke-width="1" stroke="#FFFFFF" d="M39.22 0L7.81 0L7.81-57.03L15.23-60.55L15.63-60.55L15.63-7.11L42.38-7.11L42.38-6.72L39.22 0Z"/>
-              <path fill="none" stroke-width="1" stroke="#FFFFFF" d="M57.03-7.03L57.03-7.03L66.02-7.03L66.02-7.03Q69.92-7.03 69.92-11.72L69.92-11.72L69.92-31.25L69.92-31.25Q69.92-35.94 66.02-35.94L66.02-35.94L57.03-35.94L57.03-35.94Q53.13-35.94 53.13-31.25L53.13-31.25L53.13-11.72L53.13-11.72Q53.13-7.03 57.03-7.03ZM66.02 0L57.03 0L57.03 0Q45.31 0 45.31-11.72L45.31-11.72L45.31-31.25L45.31-31.25Q45.31-42.97 57.03-42.97L57.03-42.97L66.02-42.97L66.02-42.97Q77.73-42.97 77.73-31.25L77.73-31.25L77.73-11.72L77.73-11.72Q77.73 0 66.02 0L66.02 0Z"/>
-              <path fill="none" stroke-width="1" stroke="#FFFFFF" d="M89.84 1.56L89.45 1.56L89.45-31.25L89.45-31.25Q89.45-42.97 101.17-42.97L101.17-42.97L110.94-42.97L110.94-42.58L107.81-35.94L101.17-35.94L101.17-35.94Q97.27-35.94 97.27-31.25L97.27-31.25L97.27-1.95L89.84 1.56ZM138.28 0L129.30 0L129.30 0Q117.58 0 117.58-11.72L117.58-11.72L117.58-31.25L117.58-31.25Q117.58-42.97 129.30-42.97L129.30-42.97L138.28-42.97L138.28-42.97Q150-42.97 150-31.25L150-31.25L150-29.18L125.51-10.23L125.51-10.23Q126.05-7.03 129.30-7.03L129.30-7.03L138.28-7.03L138.28-7.03Q142.19-7.03 142.19-11.72L142.19-11.72L142.19-13.79L149.61-17.30L150-17.30L150-11.72L150-11.72Q150 0 138.28 0L138.28 0Z"/>
-              <path fill="none" stroke-width="1" stroke="#FFFFFF" d="M477.50-31.25L477.50-18.40L494.26-31.91L494.26-31.91Q494.02-35.94 490.39-35.94L490.39-35.94L481.41-35.94L481.41-35.94Q477.50-35.94 477.50-31.25L477.50-31.25ZM516.17 1.56L515.78 1.56L515.78-57.03L523.20-60.55L523.59-60.55L523.59-1.95L516.17 1.56ZM539.61 1.56L539.22 1.56L539.22-57.03L546.64-60.55L547.03-60.55L547.03-1.95L539.61 1.56ZM570.47-7.03L570.47-7.03L578.67-7.03L578.67-7.03Q582.58-7.03 582.58-11.72L582.58-11.72L582.58-17.07L582.58-17.07Q582.58-21.76 578.67-21.76L578.67-21.76L570.47-21.76L570.47-21.76Q566.56-21.76 566.56-17.07L566.56-17.07L566.56-11.72L566.56-11.72Q566.56-7.03 570.47-7.03ZM578.67 0L570.47 0L570.47 0Q558.75 0 558.75-11.72L558.75-11.72L558.75-17.07L558.75-17.07Q558.75-28.79 570.47-28.79L570.47-28.79L578.67-28.79L578.67-28.79Q580.70-28.79 582.58-27.62L582.58-27.62L582.58-31.25L582.58-31.25Q582.58-35.94 578.67-35.94L578.67-35.94L564.69-35.94L564.69-36.33L567.81-42.97L578.67-42.97L578.67-42.97Q590.39-42.97 590.39-31.25L590.39-31.25L590.39-1.95L582.97 1.56L582.58 1.56L582.58-1.17L582.58-1.17Q581.09 0 578.67 0L578.67 0Z" fill="#3275ac"/>
-              <path fill="none" stroke-width="1" stroke="#FFFFFF" d="M125.39-31.25L125.39-18.40L142.15-31.91L142.15-31.91Q141.91-35.94 138.28-35.94L138.28-35.94L129.30-35.94L129.30-35.94Q125.39-35.94 125.39-31.25L125.39-31.25ZM162.11 1.56L161.72 1.56L161.72-31.25L161.72-31.25Q161.72-42.97 173.44-42.97L173.44-42.97L182.42-42.97L182.42-42.97Q194.14-42.97 194.14-31.25L194.14-31.25L194.14-1.95L186.72 1.56L186.33 1.56L186.33-31.25L186.33-31.25Q186.33-35.94 182.42-35.94L182.42-35.94L173.44-35.94L173.44-35.94Q169.53-35.94 169.53-31.25L169.53-31.25L169.53-1.95L162.11 1.56ZM232.11 0L201.95 0L201.95-0.39L222.38-35.86L202.34-35.86L202.34-36.25L205.51-42.97L234.88-42.97L234.88-42.58L214.49-7.11L235.27-7.11L235.27-6.72L232.11 0ZM254.80-7.03L254.80-7.03L263.79-7.03L263.79-7.03Q267.70-7.03 267.70-11.72L267.70-11.72L267.70-31.25L267.70-31.25Q267.70-35.94 263.79-35.94L263.79-35.94L254.80-35.94L254.80-35.94Q250.90-35.94 250.90-31.25L250.90-31.25L250.90-11.72L250.90-11.72Q250.90-7.03 254.80-7.03ZM263.79 0L254.80 0L254.80 0Q243.09 0 243.09-11.72L243.09-11.72L243.09-31.25L243.09-31.25Q243.09-42.97 254.80-42.97L254.80-42.97L263.79-42.97L263.79-42.97Q275.51-42.97 275.51-31.25L275.51-31.25L275.51-11.72L275.51-11.72Q275.51 0 263.79 0L263.79 0Z"/>
-              <path fill="none" stroke-width="1" stroke="#FFFFFF" d=" M320.82 1.56L320.43 1.56L320.43-57.03L324.57-58.98L345.43-58.98L345.43-58.98Q359.10-58.98 359.10-45.31L359.10-45.31L359.10-33.59L359.10-33.59Q359.10-19.92 345.43-19.92L345.43-19.92L328.24-19.92L328.24-1.95L320.82 1.56ZM345.43-51.95L328.24-51.95L328.24-26.95L345.43-26.95L345.43-26.95Q351.29-26.95 351.29-33.59L351.29-33.59L351.29-45.31L351.29-45.31Q351.29-51.95 345.43-51.95L345.43-51.95ZM373.36-0.63L373.36-0.63L373.36-0.63Q371.99-2.03 371.99-4.00L371.99-4.00L371.99-4.00Q371.99-5.98 373.36-7.38L373.36-7.38L373.36-7.38Q374.73-8.79 376.68-8.79L376.68-8.79L376.68-8.79Q378.63-8.79 380-7.38L380-7.38L380-7.38Q381.37-5.98 381.37-4.00L381.37-4.00L381.37-4.00Q381.37-2.03 380-0.63L380-0.63L380-0.63Q378.63 0.78 376.68 0.78L376.68 0.78L376.68 0.78Q374.73 0.78 373.36-0.63ZM440.16 1.56L439.77 1.56L419.84-57.34L426.60-60.55L426.99-60.55L443.16-11.48L458.44-60.55L458.83-60.55L465.59-57.34L446.91-1.64L440.16 1.56ZM490.39 0L481.41 0L481.41 0Q469.69 0 469.69-11.72L469.69-11.72L469.69-31.25L469.69-31.25Q469.69-42.97 481.41-42.97L481.41-42.97L490.39-42.97L490.39-42.97Q502.11-42.97 502.11-31.25L502.11-31.25L502.11-29.18L477.62-10.23L477.62-10.23Q478.16-7.03 481.41-7.03L481.41-7.03L490.39-7.03L490.39-7.03Q494.30-7.03 494.30-11.72L494.30-11.72L494.30-13.79L501.72-17.30L502.11-17.30L502.11-11.72L502.11-11.72Q502.11 0 490.39 0L490.39 0Z"/>
-            </g>
-          </svg>
+    <div class="logoTransition animate__animated animate__backInDown">
+      <div class="row logo tiltScale height">
+        <div class="col-md-12 path-demo">
+            <svg class="d-flex mx-auto" style="height: auto;" xmlns="http://www.w3.org/2000/svg"  viewBox="-165.428759765625 -0.4075073242187415 830.85751953125 150.81501464843748" preserveAspectRatio="xMidYMid" width="100%" height="100%">
+              <g fill-rule="evenodd" class="lines" transform="translate(-49.100008487701416, 106.05500030517578)">
+                <path fill="none" stroke-width="1" stroke="#FFFFFF" d="M39.22 0L7.81 0L7.81-57.03L15.23-60.55L15.63-60.55L15.63-7.11L42.38-7.11L42.38-6.72L39.22 0Z"/>
+                <path fill="none" stroke-width="1" stroke="#FFFFFF" d="M57.03-7.03L57.03-7.03L66.02-7.03L66.02-7.03Q69.92-7.03 69.92-11.72L69.92-11.72L69.92-31.25L69.92-31.25Q69.92-35.94 66.02-35.94L66.02-35.94L57.03-35.94L57.03-35.94Q53.13-35.94 53.13-31.25L53.13-31.25L53.13-11.72L53.13-11.72Q53.13-7.03 57.03-7.03ZM66.02 0L57.03 0L57.03 0Q45.31 0 45.31-11.72L45.31-11.72L45.31-31.25L45.31-31.25Q45.31-42.97 57.03-42.97L57.03-42.97L66.02-42.97L66.02-42.97Q77.73-42.97 77.73-31.25L77.73-31.25L77.73-11.72L77.73-11.72Q77.73 0 66.02 0L66.02 0Z"/>
+                <path fill="none" stroke-width="1" stroke="#FFFFFF" d="M89.84 1.56L89.45 1.56L89.45-31.25L89.45-31.25Q89.45-42.97 101.17-42.97L101.17-42.97L110.94-42.97L110.94-42.58L107.81-35.94L101.17-35.94L101.17-35.94Q97.27-35.94 97.27-31.25L97.27-31.25L97.27-1.95L89.84 1.56ZM138.28 0L129.30 0L129.30 0Q117.58 0 117.58-11.72L117.58-11.72L117.58-31.25L117.58-31.25Q117.58-42.97 129.30-42.97L129.30-42.97L138.28-42.97L138.28-42.97Q150-42.97 150-31.25L150-31.25L150-29.18L125.51-10.23L125.51-10.23Q126.05-7.03 129.30-7.03L129.30-7.03L138.28-7.03L138.28-7.03Q142.19-7.03 142.19-11.72L142.19-11.72L142.19-13.79L149.61-17.30L150-17.30L150-11.72L150-11.72Q150 0 138.28 0L138.28 0Z"/>
+                <path fill="none" stroke-width="1" stroke="#FFFFFF" d="M477.50-31.25L477.50-18.40L494.26-31.91L494.26-31.91Q494.02-35.94 490.39-35.94L490.39-35.94L481.41-35.94L481.41-35.94Q477.50-35.94 477.50-31.25L477.50-31.25ZM516.17 1.56L515.78 1.56L515.78-57.03L523.20-60.55L523.59-60.55L523.59-1.95L516.17 1.56ZM539.61 1.56L539.22 1.56L539.22-57.03L546.64-60.55L547.03-60.55L547.03-1.95L539.61 1.56ZM570.47-7.03L570.47-7.03L578.67-7.03L578.67-7.03Q582.58-7.03 582.58-11.72L582.58-11.72L582.58-17.07L582.58-17.07Q582.58-21.76 578.67-21.76L578.67-21.76L570.47-21.76L570.47-21.76Q566.56-21.76 566.56-17.07L566.56-17.07L566.56-11.72L566.56-11.72Q566.56-7.03 570.47-7.03ZM578.67 0L570.47 0L570.47 0Q558.75 0 558.75-11.72L558.75-11.72L558.75-17.07L558.75-17.07Q558.75-28.79 570.47-28.79L570.47-28.79L578.67-28.79L578.67-28.79Q580.70-28.79 582.58-27.62L582.58-27.62L582.58-31.25L582.58-31.25Q582.58-35.94 578.67-35.94L578.67-35.94L564.69-35.94L564.69-36.33L567.81-42.97L578.67-42.97L578.67-42.97Q590.39-42.97 590.39-31.25L590.39-31.25L590.39-1.95L582.97 1.56L582.58 1.56L582.58-1.17L582.58-1.17Q581.09 0 578.67 0L578.67 0Z" fill="#3275ac"/>
+                <path fill="none" stroke-width="1" stroke="#FFFFFF" d="M125.39-31.25L125.39-18.40L142.15-31.91L142.15-31.91Q141.91-35.94 138.28-35.94L138.28-35.94L129.30-35.94L129.30-35.94Q125.39-35.94 125.39-31.25L125.39-31.25ZM162.11 1.56L161.72 1.56L161.72-31.25L161.72-31.25Q161.72-42.97 173.44-42.97L173.44-42.97L182.42-42.97L182.42-42.97Q194.14-42.97 194.14-31.25L194.14-31.25L194.14-1.95L186.72 1.56L186.33 1.56L186.33-31.25L186.33-31.25Q186.33-35.94 182.42-35.94L182.42-35.94L173.44-35.94L173.44-35.94Q169.53-35.94 169.53-31.25L169.53-31.25L169.53-1.95L162.11 1.56ZM232.11 0L201.95 0L201.95-0.39L222.38-35.86L202.34-35.86L202.34-36.25L205.51-42.97L234.88-42.97L234.88-42.58L214.49-7.11L235.27-7.11L235.27-6.72L232.11 0ZM254.80-7.03L254.80-7.03L263.79-7.03L263.79-7.03Q267.70-7.03 267.70-11.72L267.70-11.72L267.70-31.25L267.70-31.25Q267.70-35.94 263.79-35.94L263.79-35.94L254.80-35.94L254.80-35.94Q250.90-35.94 250.90-31.25L250.90-31.25L250.90-11.72L250.90-11.72Q250.90-7.03 254.80-7.03ZM263.79 0L254.80 0L254.80 0Q243.09 0 243.09-11.72L243.09-11.72L243.09-31.25L243.09-31.25Q243.09-42.97 254.80-42.97L254.80-42.97L263.79-42.97L263.79-42.97Q275.51-42.97 275.51-31.25L275.51-31.25L275.51-11.72L275.51-11.72Q275.51 0 263.79 0L263.79 0Z"/>
+                <path fill="none" stroke-width="1" stroke="#FFFFFF" d=" M320.82 1.56L320.43 1.56L320.43-57.03L324.57-58.98L345.43-58.98L345.43-58.98Q359.10-58.98 359.10-45.31L359.10-45.31L359.10-33.59L359.10-33.59Q359.10-19.92 345.43-19.92L345.43-19.92L328.24-19.92L328.24-1.95L320.82 1.56ZM345.43-51.95L328.24-51.95L328.24-26.95L345.43-26.95L345.43-26.95Q351.29-26.95 351.29-33.59L351.29-33.59L351.29-45.31L351.29-45.31Q351.29-51.95 345.43-51.95L345.43-51.95ZM373.36-0.63L373.36-0.63L373.36-0.63Q371.99-2.03 371.99-4.00L371.99-4.00L371.99-4.00Q371.99-5.98 373.36-7.38L373.36-7.38L373.36-7.38Q374.73-8.79 376.68-8.79L376.68-8.79L376.68-8.79Q378.63-8.79 380-7.38L380-7.38L380-7.38Q381.37-5.98 381.37-4.00L381.37-4.00L381.37-4.00Q381.37-2.03 380-0.63L380-0.63L380-0.63Q378.63 0.78 376.68 0.78L376.68 0.78L376.68 0.78Q374.73 0.78 373.36-0.63ZM440.16 1.56L439.77 1.56L419.84-57.34L426.60-60.55L426.99-60.55L443.16-11.48L458.44-60.55L458.83-60.55L465.59-57.34L446.91-1.64L440.16 1.56ZM490.39 0L481.41 0L481.41 0Q469.69 0 469.69-11.72L469.69-11.72L469.69-31.25L469.69-31.25Q469.69-42.97 481.41-42.97L481.41-42.97L490.39-42.97L490.39-42.97Q502.11-42.97 502.11-31.25L502.11-31.25L502.11-29.18L477.62-10.23L477.62-10.23Q478.16-7.03 481.41-7.03L481.41-7.03L490.39-7.03L490.39-7.03Q494.30-7.03 494.30-11.72L494.30-11.72L494.30-13.79L501.72-17.30L502.11-17.30L502.11-11.72L502.11-11.72Q502.11 0 490.39 0L490.39 0Z"/>
+              </g>
+            </svg>
+        </div>
       </div>
     </div>
-    <div class="row navigation">
-      <div class="col-md-8 mx-auto">
-        <nav class="navbar navbar-dark navbar-expand-lg rounded m-3">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav mt-2 mt-lg-0">
-              <li class="nav-item"><a class="nav-link" href="https://www.upwork.com/o/profiles/users/~01214991522b1425cb/">Hire me</a></li>
-            </ul>
-            <ul class="nav navbar-nav mt-2 mt-lg-0">
-              <li class="nav-item"><a class="nav-link" href="http://github.com/lorenzovella">Github</a></li>
-            </ul>
-          </div>
-          <a class="navbar-brand mx-auto d-flex lead pr-5" href="#">Portfolio</a>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav ml-auto">
-              <li class="nav-item"><a class="nav-link"> Login</a></li>
-            </ul>
-          </div>
-        </nav>
+    <div class="afterlogo" style="visibility: hidden;">
+      <div class="row navigation">
+        <div class="col-md-8 mx-auto">
+          <nav class="navbar navbar-dark navbar-expand-lg rounded m-3">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav mt-2 mt-lg-0">
+                <li class="nav-item"><a class="nav-link" href="https://www.upwork.com/o/profiles/users/~01214991522b1425cb/">Hire me</a></li>
+              </ul>
+              <ul class="nav navbar-nav mt-2 mt-lg-0">
+                <li class="nav-item"><a class="nav-link" href="http://github.com/lorenzovella">Github</a></li>
+              </ul>
+            </div>
+            <a class="navbar-brand mx-auto d-flex lead pr-5" href="#">Portfolio</a>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link"> Login</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-10 mx-auto">
-        <div class="h2 mx-auto">Recent projects</div>
-        <div class="row outerTilt tiltCt">
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col m-2 mx-auto">
-                <span data-tilt></span>
-                <div class="card">
-                  <h5 class="card-header">
-                    The Leg Log - Brazillian Jiu-Jitsu Training Log
-                  </h5>
-                  <div class="card-body">
-                    <h3 class="tiltItem">
-                      Full development using Django. A remote project contracted by an Australian client who wanted a Web-App to log Jiu-Jitsu Sessions and Techniques.</br>
-                      <h4>
-                      Project steps:</br>
-                      -Database modelling</br>
-                      -CRUD Operations and Backend Logic</br>
-                      -Front-end views</br>
-                      -Form constrains and advanced form logic</br>
-                      -Authentication and profile views</br>
-                      -Deployment, host and domain configuration
-                      </h4>
-                    </h3>
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+          <div class="h2 mx-auto">Recent projects</div>
+          <div class="row outerTilt tiltCt">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col m-2 mx-auto">
+                  <span data-tilt></span>
+                  <div class="card">
+                    <h5 class="card-header">
+                      The Leg Log - Brazillian Jiu-Jitsu Training Log
+                    </h5>
+                    <div class="card-body">
+                      <h3 class="tiltItem">
+                        Full development using Django. A remote project contracted by an Australian client who wanted a Web-App to log Jiu-Jitsu Sessions and Techniques.</br>
+                        <h4>
+                        Project steps:</br>
+                        -Database modelling</br>
+                        -CRUD Operations and Backend Logic</br>
+                        -Front-end views</br>
+                        -Form constrains and advanced form logic</br>
+                        -Authentication and profile views</br>
+                        -Deployment, host and domain configuration
+                        </h4>
+                      </h3>
+                    </div>
+                    <div class="card-footer">
+                      <a class="lead" href="http://www.theleglog.com">See the project</a> - Developed between apr/20 to jun/20
+                    </div>
                   </div>
-                  <div class="card-footer">
-                    <a class="lead" href="http://www.theleglog.com">See the project</a> - Developed between apr/20 to jun/20
+                </div>
+              </div>
+              <div class="row">
+                <div class="col m-2 mx-auto">
+                  <div class="card">
+                    <h5 class="card-header">
+                      SQN - Nonconformity treatment system
+                    </h5>
+                    <div class="card-body">
+                      <h3 class="tiltItem">
+                      Internship developing a Web system in Node.JS</br>
+                      Presential project developed for a company member of São José dos Campos Technology Park.
+                        <h4>
+                        The demand was to build an app capable of processing all Nonconformities in the company. The deliverable made use of methods involving: Finite-state machines, LDAP authentication, Form handling, Automatic email sending </br>
+                        Besides back-end logic, the system also included a Dashboard and a Dynamic data table to search for instances.
+                        </h4>
+                      </h3>
+                    </div>
+                    <div class="card-footer">
+                      <a class="lead" href="#">See the project</a> - Developed between jan/19 to mar/19
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col m-2 mx-auto">
-                <div class="card">
-                  <h5 class="card-header">
-                    SQN - Nonconformity treatment system
-                  </h5>
-                  <div class="card-body">
-                    <h3 class="tiltItem">
-                    Internship developing a Web system in Node.JS</br>
-                    Presential project developed for a company member of São José dos Campos Technology Park.
-                      <h4>
-                      The demand was to build an app capable of processing all Nonconformities in the company. The deliverable made use of methods involving: Finite-state machines, LDAP authentication, Form handling, Automatic email sending </br>
-                      Besides back-end logic, the system also included a Dashboard and a Dynamic data table to search for instances.
-                      </h4>
-                    </h3>
-                  </div>
-                  <div class="card-footer">
-                    <a class="lead" href="#">See the project</a> - Developed between jan/19 to mar/19
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 ">
-            <div class="row">
-              <div class="col m-2 mx-auto">
-                <div class="card">
-                  <h5 class="card-header">
-                    Inventory App
-                  </h5>
-                  <div class="card-body">
-                    <h3 class="tiltItem">
-                      Full development using Django. A remote project made for a bioscience company based in California, which needed a Web-App for it's inventory.</br>
-                      <h4>
-                      Three-stage project involving:</br>
-                      -Database modelling</br>
-                      -CRUD Operations and Backend Logic</br>
-                      -Front end views
-                      </h4>
-                    </h3>
-                  </div>
-                  <div class="card-footer">
-                    <a class="lead" href="#">See the project</a> - Developed between jan/20 to mar/20
+            <div class="col-md-6 ">
+              <div class="row">
+                <div class="col m-2 mx-auto">
+                  <div class="card">
+                    <h5 class="card-header">
+                      Inventory App
+                    </h5>
+                    <div class="card-body">
+                      <h3 class="tiltItem">
+                      Full development using Django. A remote project made for a bioscience company based in California, which needed a Web-App for it's inventory.
+                      </br>
+                        <h4>
+                        Three-stage project involving:</br>
+                        -Database modelling</br>
+                        -CRUD Operations and Backend Logic</br>
+                        -Front end views
+                        </h4>
+                      </h3>
+                    </div>
+                    <div class="card-footer">
+                      <a class="lead" href="#">See the project</a> - Developed between jan/20 to mar/20
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col m-2 mx-auto">
-                <div class="card">
-                  <h5 class="card-header">
-                    Manada Lanches - Food ordering service
-                  </h5>
-                  <div class="card-body">
-                    <h3 class="tiltItem">
-                      Django project developed to a local restaurant, which pursuited a less time-consuming way to handle consumer orders.</br>
-                      <h4>
-                      The app directs costumers through an online menu and checkout, and the order gets sent directly to the restaurant.</br>
-                      Project steps:</br>
-                      -Database modelling</br>
-                      -Menu and Cart back-end Logic</br>
-                      -Front end views</br>
-                      -Restaurant notification API</br>
-                      -Deployment, host and domain configuration
-                      </h4>
-                    </h3>
-                  </div>
-                  <div class="card-footer">
-                    <a class="lead" href="#">See the project</a> - Developed between jun/20 to jul/20
+              <div class="row">
+                <div class="col m-2 mx-auto">
+                  <div class="card">
+                    <h5 class="card-header">
+                      Manada Lanches - Food ordering service
+                    </h5>
+                    <div class="card-body">
+                      <h3 class="tiltItem">
+                        Django project developed to a local restaurant, which pursuited a less time-consuming way to handle consumer orders.</br>
+                        <h4>
+                        The app directs costumers through an online menu and checkout, and the order gets sent directly to the restaurant.</br>
+                        Project steps:</br>
+                        -Database modelling</br>
+                        -Menu and Cart back-end Logic</br>
+                        -Front end views</br>
+                        -Restaurant notification API</br>
+                        -Deployment, host and domain configuration
+                        </h4>
+                      </h3>
+                    </div>
+                    <div class="card-footer">
+                      <a class="lead" href="#">See the project</a> - Developed between jun/20 to jul/20
+                    </div>
                   </div>
                 </div>
               </div>
@@ -170,14 +179,14 @@ attachTilt()
           </div>
         </div>
       </div>
+      <footer class="row navigation">
+        <div class="col-md-8 mx-auto">
+          <nav class="navbar navbar-dark navbar-expand-lg rounded mt-3">
+            <img src="static/pickle-rick.png"/>
+            <a class="navbar-brand mx-auto d-flex lead text-wrap" >No copyright - No rights reserved - 2020 - Running on Django, developed using Bootstrap, jQuery, Anime.js, Tilt.js</a>
+          </nav>
+        </div>
+      </footer>
     </div>
-    <footer class="row navigation">
-      <div class="col-md-8 mx-auto">
-        <nav class="navbar navbar-dark navbar-expand-lg rounded mt-3">
-          <img src="static/pickle-rick.png"/>
-          <a class="navbar-brand mx-auto d-flex lead text-wrap" >No copyright - No rights reserved - 2020 - Running on Django, developed using Bootstrap, jQuery, Anime.js, Tilt.js</a>
-        </nav>
-      </div>
-    </footer>
   </div>
 {% endblock %}
