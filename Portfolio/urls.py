@@ -20,5 +20,5 @@ from Portfolio.app.views import projetoListView
 urlpatterns = [
     path("", projetoListView.as_view(), name="projeto_list"),
     path('app/', include('Portfolio.app.urls')),
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls,),
 ]
