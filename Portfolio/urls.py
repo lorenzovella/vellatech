@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
-
+from Portfolio.app.views import projetoListView
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='index.html'), name='index'),
+    path("", projetoListView.as_view(), name="projeto_list"),
     path('app/', include('Portfolio.app.urls')),
     path('admin/', admin.site.urls),
 ]
