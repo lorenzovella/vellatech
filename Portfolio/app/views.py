@@ -7,3 +7,4 @@ from django.shortcuts import render, HttpResponseRedirect
 class projetoListView(generic.ListView):
     model = models.projeto
     form_class = forms.projetoForm
+    ordering = ['-created']
