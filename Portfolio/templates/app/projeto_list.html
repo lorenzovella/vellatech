@@ -73,8 +73,8 @@ $( document ).ready(function() {
       <div class="col-md-10 mx-auto">
         <div class="display-4 mx-auto">Recent projects</div>
         <div class="row outerTilt tiltCt">
-          <div class="row-md-12">
-          <!-- {% widthratio object_list|length 2 1 as midpoint %} -->
+          <div class="col-md-6">
+          {% widthratio object_list|length 2 1 as midpoint %}
           {% for object in object_list %}
             <div class="row">
               <div class="col m-2 mx-auto">
@@ -99,8 +99,8 @@ $( document ).ready(function() {
                 </div>
               </div>
             </div>
-            {% ifequal forloop.counter|divisibleby:"2" True %}
-          </div><div class="row-md-12">
+            {% if forloop.counter == midpoint|add:"0" %}
+          </div><div class="col-md-6">
             {% endif %}
           {% if forloop.last %}
           </div>
