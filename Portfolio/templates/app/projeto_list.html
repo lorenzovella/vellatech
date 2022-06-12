@@ -92,7 +92,9 @@ $( document ).ready(function() {
                     </h3>
                   </div>
                   <div class="card-footer">
-                    <a class="lead" href="{{object.link}}">See the project</a> - Developed between {{object.periodoexecucao}}
+                    {% if object.link != "" %}<a class="lead" href="{{object.link}}">See the project</a> - {{object.periodoexecucao}}
+                    {% else %}<a class="lead" href="{{object.link}}">{{object.periodoexecucao}}
+                    {% endif %}
                   </div>
                 </div>
               </div>
@@ -112,8 +114,7 @@ $( document ).ready(function() {
 <footer class="row navigation">
   <div class="col-md-8 mx-auto">
     <nav class="navbar navbar-dark navbar-expand-lg rounded mt-3">
-      <a class="navbar-brand mx-auto d-flex text-wrap lead text-center">VellaTech @ 2021 - CNPJ:  37.349.260/0001-87 </br>No copyright - No rights reserved</a>
-      <img src="static/pickle-rick.png"/>
+      <a class="navbar-brand mx-auto d-flex text-wrap lead text-center">VellaTech LTDA @ 2022 - CNPJ:43.041.522/0001-44</br></a>
     </nav>
   </div>
 </footer>
